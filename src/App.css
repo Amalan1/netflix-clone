@@ -1,0 +1,7 @@
+* {
+  margin: 0; /*if v type a title it comes to the centre as there is an imaginary margin,so this helps us to remove it and place the title at left end*/
+}
+.App {
+  background-color: #111;
+  color: white;
+}

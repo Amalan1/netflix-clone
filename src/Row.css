@@ -1,0 +1,36 @@
+.row {
+  margin-left: 20px; /*the posters are moved a little bit from the left end*/
+}
+.row__posters {
+  display: flex;
+  /**flex creates the row for posters ,if it is removed the posters will be in column*/
+  overflow-y: hidden; /**the y axis remains still even if we scroll*/
+  overflow-x: scroll; /**the x axis moves if we scroll*/
+  /*this is done because when we slide to check the list of movies in trending r others only that should move not the entire screen*/
+  padding: 20px; /*when the cursor is on the poster the image zooms but scroll bar hides it so this would fix that prob*/
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none; /*this function instructs the website to hide th scroll bar in ui but let ot function*/
+}
+
+.row__poster {
+  width: 100%;
+  object-fit: contain; /* it helps to fit the image properly irrespective of the screen size i.e it is independent of other things*/
+  max-height: 100px;
+  margin-right: 10px;
+  transition: transform 450ms; /*delay time for transform in below part*/
+}
+
+.row__poster:hover {
+  transform: scale(
+    1.08
+  ); /* when the cursor is over the particular poster it just pops up to 1.08 of the size*/
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
